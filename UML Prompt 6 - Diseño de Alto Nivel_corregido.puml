@@ -1,0 +1,45 @@
+graph TD
+    subgraph Cliente
+        Frontend["Frontend SPA [React/Angular]"]
+    end
+
+    subgraph "Cloud / Infraestructura"
+        gateway["API Gateway [Kong/NGINX"] 
+        
+        subgraph Microservicios
+            ofertas["Servicio Ofertas"]
+            candidatos["Servicio Candidatos"]
+            pipeline["Servicio Pipeline"]
+            usuarios["Servicio Usuarios"]
+        end
+
+        subgraph Persistencia
+            postgresql["PostgreSQL DB"]
+            redis["Redis Cache"]
+            s3["Almacenamiento S3"]
+        end
+        
+        bus["Bus de Mensajería [Kafka/RabbitMQ]"]
+        auth["Auth Service [OAuth2 / Keycloak]"]
+    end
+
+    Frontend --> gateway
+    gateway --> ofertas
+    gateway --> candidatos
+    gateway --> pipeline
+    gateway --> usuarios
+
+    ofertas --> postgresql
+    candidatos --> postgresql
+    pipeline --> postgresql
+    usuarios --> postgresql
+
+    ofertas --> redis
+    candidatos --> redis
+
+    candidatos --> s3
+
+    ofertas --> bus
+    pipeline --> bus
+
+    gateway --> auth

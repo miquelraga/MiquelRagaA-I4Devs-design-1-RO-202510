@@ -1,0 +1,40 @@
+erDiagram
+    UsuarioInterno {
+        INT id_usuario PK
+        VARCHAR nombre
+        VARCHAR email
+        ENUM rol
+    }
+    Oferta {
+        INT id_oferta PK
+        VARCHAR titulo
+        TEXT descripcion
+        ENUM estado
+        DATE fecha_publicacion
+        INT id_usuario FK
+    }
+    Candidato {
+        INT id_candidato PK
+        VARCHAR nombre
+        VARCHAR email
+        VARCHAR telefono
+        VARCHAR cv_url
+        DATE fecha_aplicacion
+    }
+    EtapaPipeline {
+        INT id_etapa PK
+        VARCHAR nombre
+        INT orden
+    }
+    Postulacion {
+        INT id_postulacion PK
+        INT id_candidato FK
+        INT id_oferta FK
+        INT id_etapa FK
+        DATE fecha_estado
+    }
+
+    UsuarioInterno ||--o{ Oferta : "crea"
+    Oferta ||--o{ Postulacion : "tiene"
+    Candidato ||--o{ Postulacion : "aplica"
+    EtapaPipeline ||--o{ Postulacion : "estado"
