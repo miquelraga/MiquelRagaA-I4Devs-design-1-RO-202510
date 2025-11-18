@@ -1,8 +1,14 @@
 # Disclaimer
 **Author** : Miquel Raga
+
 **Date** : 18/11/2025
+
 **LLM Usado : Microsot Copilot con GPT-5**
+
+**Markdown file generadas con:** https://editormarkdown.com/
+
 **UML generados con:** https://www.mermaidchart.com/
+
 **Código UML generado por Copilot corregido por Mermaid AI :** 
 * UML Prompt 5 - Modelado de Datos_Corregido.puml
 * UML Prompt 6 - Diseño de Alto Nivel_corregido.puml
@@ -79,5 +85,6 @@ Separa los prompts por cada undo de los puntos indicados
 ### ✅ **7. Diagrama para casos de uso**
 **Prompt:**
 > *“Crea el código puml compatible exactamente para mermaid para los tres diagramas asociados a los casos de uso  Crear oferta, Revisar candidatos y Programar entrevista”*
+
 
 
