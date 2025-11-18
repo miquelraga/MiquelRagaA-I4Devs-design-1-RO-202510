@@ -1,4 +1,21 @@
-# Prompt Inicial para obtención de prompts
+# Disclaimer
+**Author** : Miquel Raga
+**Date** : 18/11/2025
+**LLM Usado : Microsot Copilot con GPT-5**
+**UML generados con:** https://www.mermaidchart.com/
+**Código UML generado por Copilot corregido por Mermaid AI :** 
+* UML Prompt 5 - Modelado de Datos_Corregido.puml
+* UML Prompt 6 - Diseño de Alto Nivel_corregido.puml
+
+**Fichero UML generados por mermaid** 
+* UML Prompt 5 - Modelado de Datos.png
+* UML Prompt 6 - Diseño de Alto Nivel.png
+* UML Promtp 7 - Diagrama caso uso Crear oferta.png
+* UML Promtp 7 - Diagrama caso uso Revisar candidatos.png
+* UML Promtp 7 - Diagrama caso uso Programar entrevista.png
+
+***
+# Prompt Inicial para obtención de prompts. Meta-prompt
 Soy un product manager que voy a generar una aplicación de ATS (Applicant-Tracking System) desde cero  Necesito prompts para GPT-5 para las diferentes etapas del diseño del software y las funcionalidades clave
 Mi misión es diseñar la primera versión del sistema
 Las etapas por las que quiero que me des el prompt más idóneo son:
@@ -58,5 +75,9 @@ Separa los prompts por cada undo de los puntos indicados
 > *“Propón el diseño de alto nivel para la arquitectura de un ATS escalable. Incluye componentes principales (frontend, backend, base de datos, API Gateway), tecnologías recomendadas, y justificación de las decisiones. Presenta el diagrama de arquitectura y explica cómo se integran los módulos.”*
 
 ***
+# Prompts adicionales
+### ✅ **7. Diagrama para casos de uso**
+**Prompt:**
+> *“Crea el código puml compatible exactamente para mermaid para los tres diagramas asociados a los casos de uso  Crear oferta, Revisar candidatos y Programar entrevista”*
 
 
